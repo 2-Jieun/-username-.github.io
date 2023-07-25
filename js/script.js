@@ -8,20 +8,20 @@ new fullpage("#fullpage",{
 
 // ex section button.on effect
 $(function(){
-    $(".ex-button > button:first-child").click(function(){
-        $(".ex-button > button").removeClass("on");
+    $(".ex-button > a:first-child").click(function(){
+        $(".ex-button > a").removeClass("on");
         $(this).addClass("on");
     })
-    $(".ex-button > button:last-child").click(function(){
-        $(".ex-button > button").removeClass("on");
+    $(".ex-button > a:last-child").click(function(){
+        $(".ex-button > a").removeClass("on");
         $(this).addClass("on");
     })
 
-    $(".ex-button > button:first-child").click(function(){
+    $(".ex-button > a:first-child").click(function(){
         $(".international").removeClass("on");
         $(".domestic").addClass("on");
     })
-    $(".ex-button > button:last-child").click(function(){
+    $(".ex-button > a:last-child").click(function(){
         $(".domestic").removeClass("on");
         $(".international").addClass("on");
     })

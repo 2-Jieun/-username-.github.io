@@ -1,14 +1,12 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Montserrat:wght@400;700&family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
 *{margin: 0; padding: 0; box-sizing: border-box;}
 ol,ul,li{list-style: none;}
 a{text-decoration: none; color: inherit;}
 html{scroll-behavior: smooth;}
-body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/background.png"); background-size: contain; scroll-behavior: smooth;}
-.ko{font-family: 'Nanum Brush Script', cursive;}
-.en1{font-family: 'Montserrat', sans-serif;}
-.en2{font-family: 'Leckerli One', cursive;}
-.section{padding: 30px; overflow-x: hidden;}
+body{font-family: 'East Sea Dokdo', cursive; background-image: url("../img/background.png"); background-size: contain; scroll-behavior: smooth;}
+.section{padding: 30px; overflow: hidden;}
+.cfix::after{content: ""; display: block; clear: both;}
 
 
 .cls-1{font-size:72px;fill:#fff;font-family:LeckerliOne-Regular, Leckerli One;letter-spacing:0.1em;}
@@ -39,6 +37,9 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
     position: absolute;
     top: 30px;
 }
+.title > p{
+    font-size: 25px;
+}
 .title .line{
     width: 100px; 
     height: 1px; 
@@ -61,8 +62,7 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
 #menu li{
     width: 150px;
     height: 50px;
-    background-color: rgba(127, 255, 212, 0.7);
-    border-radius: 100px;
+    background-color: rgba(209, 156, 255, 0.3);
     float: left;
     text-align: center;
     line-height: 50px;
@@ -72,16 +72,16 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
     margin-right: 0;
 }
 #menu li:hover{
-    background-color: rgb(127, 255, 212);
+    background-color: rgb(209, 156, 255);
     cursor: pointer;
     transition: all 0.5s;
 }
 #menu li a{
-    font-size: 25px;
+    font-size: 28px;
     transition: all 0.5s;
 }
 #menu li:hover a{
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
     transition: all 0.5s;
 }
@@ -136,7 +136,7 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
 #profile .prof-box .prof-pic img{
     width: 300px;
 }
-#profile .prof-box .prof-pic p{
+#profile .prof-box .prof-pic .best{
     text-align: center;
     font-weight: bold;
     margin-top: 30px;
@@ -163,142 +163,78 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
 }
 /* #profile END */
 
-#experience .ex-nav{
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin: 80px 0 0 80px;
+.ex-nav{
+    padding: 0 50px;
 }
-#experience .ex-nav > div > button:first-child{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 30px;
-    transition: all 0.5s;
-    position: absolute;
-    top: 130px;
-    left: 100px;
+.ex-button{
+    margin: 50px 0 30px;
 }
-#experience .ex-nav > div > button:last-child{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 30px;
-    transition: all 0.5s;
-    position: absolute;
-    top: 130px;
-    left: 250px;
-}
-#experience .ex-nav > div > button.on,
-#experience .ex-nav > div > button:hover{
-    font-weight: bold;
-    font-size: 35px;
+.ex-button a{
+    font-size: 33px;
     transition: all 0.5s;
 }
-#experience .ex-nav > div > button:first-child{
+.ex-button a:first-child{
     margin-right: 20px;
 }
+.ex-button a.on,
+.ex-button a:hover{
+    font-size: 35px;
+    font-weight: bold;
+    transition: all 0.5s;
+}
 
-.ex-nav .domestic,
-.ex-nav .international{
-    width: 100%;
-    position: absolute;
-    top: 200px;
-    left: 0;
-    padding: 0 100px;
+.domestic,
+.international{
     display: none;
 }
-.ex-nav .domestic.on,
-.ex-nav .international.on{
+.domestic.on,
+.international.on{
     display: block;
 }
-
-.domestic .lk{
-    width: 100%;
-    margin-bottom: 50px;
-    overflow: hidden;
-}
-.domestic .lk img{
+.domestic > div > img,
+.international > div > img{
     width: 500px;
-    margin-right: 50px;
+}
+.domestic > div > div > p.num,
+.international > div > div > p.num{
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.lk,
+.eng-academy{
+    margin-bottom: 80px;
+}
+.lk > img,
+.eng-academy > img{
     float: left;
+    margin-right: 30px;
 }
-.domestic .lk h3{
-    font-size: 30px;
+.lk-txt > h3,
+.academy-txt > h3{
+    font-size: 35px;
 }
-.domestic .lk .num{
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-.domestic .lk p{
-    font-size: 25px;
-}
-
-.domestic .invi{
-    width: 100%;
-    overflow: hidden;
-}
-.domestic .invi .invi-txt{
-    float: right;
-}
-.domestic .invi img{
-    width: 500px;
-    margin-left: 50px;
-    float: right;
-}
-.domestic .invi h3{
-    font-size: 30px;
-}
-.domestic .invi .num{
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-.domestic .invi p{
-    font-size: 25px;
+.lk-txt > p,
+.academy-txt > p{
+    font-size: 28px;
 }
 
-.international .eng-academy{
-    width: 100%;
-    margin-bottom: 50px;
-    overflow: hidden;
+.invi > img,
+.hotaru > img{
+    float: right;
+    margin-left: 30px;
 }
-.international .eng-academy img{
-    width: 500px;
-    margin-right: 50px;
-    float: left;
-}
-.international .eng-academy h3{
-    font-size: 30px;
-}
-.international .eng-academy .num{
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-.international .eng-academy p{
-    font-size: 25px;
-}
-
-.international .hotaru{
-    width: 100%;
-    overflow: hidden;
-}
-.international .hotaru .hotaru-txt{
+.invi-txt,
+.hotaru-txt{
     float: right;
 }
-.international .hotaru img{
-    width: 500px;
-    margin-left: 50px;
-    float: right;
+.invi-txt > h3,
+.hotaru-txt > h3{
+    font-size: 35px;
 }
-.international .hotaru h3{
-    font-size: 30px;
-}
-.international .hotaru .num{
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-.international .hotaru p{
-    font-size: 25px;
+.invi-txt > p,
+.hotaru-txt > p{
+    font-size: 28px;
 }
 /* #experience END */
 
@@ -311,7 +247,7 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
     overflow: hidden;
 }
 .portfolio-box h3{
-    font-size: 35px;
+    font-size: 40px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -320,11 +256,11 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
     border-radius: 50px;
 }
 .portfolio-box .box-left .port-txt{
-    font-size: 25px;
+    font-size: 30px;
     margin-top: 20px;
 }
 .portfolio-box .box-right .port-txt{
-    font-size: 25px;
+    font-size: 30px;
     margin-top: 49px;
 }
 .portfolio-box b::before{
@@ -345,7 +281,7 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
     left: 0;
     text-align: center;
     line-height: 375px;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
     cursor: pointer;
     opacity: 0;
@@ -362,30 +298,27 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
 
 .thanks > h2{
     text-align: center;
-    font-size: 50px;
-    margin: 100px 0;
+    font-size: 55px;
+    margin: 30px 0 100px;
 }
 .contact-me{
     text-align: center;
 }
 .contact-me > h3{
-    font-size: 35px;
+    font-size: 40px;
     margin-bottom: 50px;
 }
 .contact-me > p{
     font-size: 30px;
 }
 .contact-me >img{
-    margin-top: 50px;
+    margin-top: 40px;
 }
 /* #contact END */
 
 
 /* 반응형 */
 @media all and (max-width: 1822px){
-    #profile .prof-box > div p{
-        font-size: 25px;
-    }
     #profile .prof-box .about{
         margin: 0 100px 0 150px;
     }
@@ -412,10 +345,10 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
     }
     #profile .prof-box .prof-pic p{
         margin-top: 20px;
-        font-size: 30px;
+        font-size: 35px;
     }
     #profile .prof-box > div h3{
-        font-size: 30px;
+        font-size: 35px;
     }
     #profile .prof-box .about{
         float: left;
@@ -432,35 +365,8 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
         margin-bottom: 48px;
     }
 
-    #experience .ex-nav > div > button:first-child{
-        left: 50px;
-    }
-    #experience .ex-nav > div > button:last-child{
-        left: 200px;
-    }
-    .ex-nav .domestic,
-    .ex-nav .international{
-        padding: 0 50px;
-    }
-    .domestic .lk,
-    .international .eng-academy{
-        margin-bottom: 100px;
-    }
-    .domestic .lk img{
-        width: 350px;
-        margin-right: 30px;
-    }
-    .domestic .invi img{
-        width: 350px;
-        margin-left: 30px;
-    }
-    .international .eng-academy img{
-        width: 350px;
-        margin-right: 30px;
-    }
-    .international .hotaru img{
-        width: 350px;
-        margin-left: 30px;
+    .ex-nav{
+        padding: 0;
     }
 
     .portfolio-box img{
@@ -476,6 +382,19 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
     }
 }
 
+@media all and (max-width: 1390px){
+    .invi > img,
+    .hotaru > img{
+        float: left;
+        margin-left: 0;
+        margin-right: 30px;
+    }
+    .invi-txt,
+    .hotaru-txt{
+        float: none;
+    }
+}
+
 @media all and (max-width: 1250px){
     #profile .prof-box .about{
         float: left;
@@ -488,26 +407,6 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
 
     .portfolio-box{
         padding: 0 80px;
-    }
-
-    .domestic .invi .invi-txt{
-        float: none;
-    }
-    .domestic .invi img{
-        margin-left: 0;
-        margin-right: 30px;
-        display: block;
-        float: left;
-    }
-
-    .international .hotaru .hotaru-txt{
-        float: none;
-    }
-    .international .hotaru img{
-        margin-left: 0;
-        margin-right: 30px;
-        display: block;
-        float: left;
     }
 }
 
@@ -531,18 +430,15 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
         margin-top: 20px;
     }
     #profile .prof-box .about{
+        width: 480px;
         margin-left: 0;
     }
     #profile .prof-box .ability{
         margin-right: 0;
     }
 
-    #experience .ex-nav > div > button:first-child,
-    #experience .ex-nav > div > button:last-child{
-        top: 100px;
-    }
-    .ex-nav .domestic, .ex-nav .international{
-        top: 150px;
+    .ex-nav{
+        padding-left: 30px;
     }
 
     .portfolio-box{
@@ -557,11 +453,6 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
     
     #start > a img{
         width: 200px;
-    }
-
-    .domestic .lk, .domestic .invi,
-    .international .eng-academy, .international .hotaru{
-        margin-bottom: 80px;
     }
 
     .portfolio-box{
@@ -580,10 +471,10 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
         width: 100px;
     }
     #menu li a{
-        font-size: 20px;
+        font-size: 23px;
     }
     #menu li:hover a{
-        font-size: 22px;
+        font-size: 25px;
     }
 
     #profile .prof-box{
@@ -593,6 +484,7 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
         float: none;
         margin: 0;
         text-align: center;
+        width: 100%;
     }
     #profile .prof-box .about-me,
     #profile .prof-box .education,
@@ -605,11 +497,28 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
         text-align: center;
     }
     #profile .prof-box > div p{
-        font-size: 20px;
+        font-size: 30px;
+    }
+
+    .domestic > div > img,
+    .international > div > img{
+        width: 100%;
+    }
+    .lk > img,
+    .invi > img,
+    .eng-academy > img,
+    .hotaru > img{
+        float: none;
+        margin-right: 0;
+        margin-bottom: 30px;
     }
 
     .thanks > h2{
-        margin: 80px 50px;
+        font-size: 45px;
+        margin: 30px 50px;
+    }
+    .contact-me > h3{
+        font-size: 37px;
     }
 }
 
@@ -621,54 +530,6 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
     #start > a img{
         width: 180px;
     }
-
-    .domestic .lk, .domestic .invi,
-    .international .eng-academy, .international .hotaru{
-        margin-bottom: 50px;
-    }
-    .domestic .lk img{
-        width: 100%;
-        margin-right: 0;
-        float: none;
-        display: block;
-        margin: 0 auto;
-    }
-    .domestic .lk h3{
-        margin-top: 30px;
-    }
-    
-    .domestic .invi img{
-        width: 100%;
-        margin-right: 0;
-        float: none;
-        display: block;
-        margin: 0 auto;
-    }
-    .domestic .invi h3{
-        margin-top: 30px;
-    }
-    
-    .international .eng-academy img{
-        width: 100%;
-        margin-right: 0;
-        float: none;
-        display: block;
-        margin: 0 auto;
-    }
-    .international .eng-academy h3{
-        margin-top: 30px;
-    }
-
-    .international .hotaru img{
-        width: 100%;
-        margin-right: 0;
-        float: none;
-        display: block;
-        margin: 0 auto;
-    }
-    .international .hotaru h3{
-        margin-top: 30px;
-    }
 }
 
 @media all and (max-width: 650px){
@@ -676,9 +537,9 @@ body{font-family: 'Nanum Brush Script', cursive; background-image: url("../img/b
         width: 80px;
     }
     #menu li a{
-        font-size: 16px;
+        font-size: 18px;
     }
     #menu li:hover a{
-        font-size: 18px;
+        font-size: 20px;
     }
 }

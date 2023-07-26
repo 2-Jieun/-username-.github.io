@@ -442,7 +442,7 @@ body{font-family: 'East Sea Dokdo', cursive; background-image: url("../img/backg
     }
 
     .ex-nav{
-        padding-left: 30px;
+        padding: 0 30px;
     }
 
     .portfolio-box{

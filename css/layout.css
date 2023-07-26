@@ -261,7 +261,7 @@ body{font-family: 'East Sea Dokdo', cursive; background-image: url("../img/backg
 }
 .portfolio-box .box-right .port-txt{
     font-size: 30px;
-    margin-top: 49px;
+    margin: 20px 0 38px;
 }
 .portfolio-box b::before{
     content: "*";

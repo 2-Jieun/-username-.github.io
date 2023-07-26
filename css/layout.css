@@ -62,7 +62,7 @@ body{font-family: 'East Sea Dokdo', cursive; background-image: url("../img/backg
 #menu li{
     width: 150px;
     height: 50px;
-    background-color: rgba(209, 156, 255, 0.3);
+    background-color: rgba(255, 196, 156, 0.3);
     float: left;
     text-align: center;
     line-height: 50px;
@@ -72,7 +72,7 @@ body{font-family: 'East Sea Dokdo', cursive; background-image: url("../img/backg
     margin-right: 0;
 }
 #menu li:hover{
-    background-color: rgb(209, 156, 255);
+    background-color: rgb(255, 196, 156);
     cursor: pointer;
     transition: all 0.5s;
 }
@@ -369,6 +369,10 @@ body{font-family: 'East Sea Dokdo', cursive; background-image: url("../img/backg
         padding: 0;
     }
 
+    .box-left,
+    .box-right{
+        width: 400px;
+    }
     .portfolio-box img{
         width: 400px;
     }

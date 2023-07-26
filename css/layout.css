@@ -131,7 +131,7 @@ body{font-family: 'East Sea Dokdo', cursive; background-image: url("../img/backg
 #profile .prof-box{
     display: flex;
     align-items: center;
-    padding: 150px 0 0 150px;
+    padding: 50px 0 0 150px;
 }
 #profile .prof-box .prof-pic img{
     width: 300px;
@@ -337,7 +337,7 @@ body{font-family: 'East Sea Dokdo', cursive; background-image: url("../img/backg
 @media all and (max-width: 1500px){
     #profile .prof-box{
         display: block;
-        padding: 30px;
+        padding: 50px 0;
     }
     #profile .prof-box .prof-pic{
         text-align: center;
@@ -410,7 +410,7 @@ body{font-family: 'East Sea Dokdo', cursive; background-image: url("../img/backg
     }
 
     .portfolio-box{
-        padding: 0 80px;
+        padding: 0 30px;
     }
 }
 
@@ -435,10 +435,10 @@ body{font-family: 'East Sea Dokdo', cursive; background-image: url("../img/backg
     }
     #profile .prof-box .about{
         width: 480px;
-        margin-left: 0;
+        margin-left: 30px;
     }
     #profile .prof-box .ability{
-        margin-right: 0;
+        margin-right: 30px;
     }
 
     .ex-nav{
